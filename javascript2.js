@@ -1,4 +1,4 @@
-const playerSelection = getPlayerChoice();
+
 const computerSelection = getComputerChoice();
 let compScore;
 let playerScore;
@@ -8,43 +8,82 @@ function getComputerChoice(){
     let comp = rps[Math.floor(Math.random() * rps.length)]
     return comp
 }
+
 function getPlayerChoice(){
     let playerChoice = prompt('Will you choose rock, paper, or scissors?');
     let options = playerChoice.toLowerCase();
     return options
 }
 
+/*
 function playRound(playerSelection, computerSelection){
 
     
     if(playerSelection === computerSelection){
-        console.log('Tie game!');
+        return('Tie game!');
     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
-        console.log('You lose! Paper beats rock.');
-        ++compScore;
+        return('You lose! Paper beats rock.');
+        compScore++;
     }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-        console.log('You win! Rock beats scissors.');
+        return('You win! Rock beats scissors.');
     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-        console.log('You lose! Scissors beats paper.');
-        ++compScore;
+        return('You lose! Scissors beats paper.');
+        compScore++;
     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
-        console.log('You win! Paper beats rock.');
+        return('You win! Paper beats rock.');
     }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-        console.log('You lose! Rock beats scissors.');
-        ++compScore;
+        return('You lose! Rock beats scissors.');
+        compScore++;
     }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-        console.log('You win! Scissors beats rock.');
+        return('You win! Scissors beats rock.');
     }else{
         console.log('Invalid input')
     }
     
 
 
-}
+}*/
 
 function game(){
     for(let i=0; i < 5; i++){
-        playRound(playerSelection, computerSelection)
+        /*
+        function getPlayerChoice(){
+            let playerChoice = prompt('Will you choose rock, paper, or scissors?');
+            let options = playerChoice.toLowerCase();
+            return options
+        }
+        
+        function playRound(playerSelection, computerSelection){
+
+    
+            if(playerSelection === computerSelection){
+                return('Tie game!');
+            }else if(playerSelection === 'rock' && computerSelection === 'paper'){
+                return('You lose! Paper beats rock.');
+                compScore++;
+            }else if(playerSelection === 'rock' && computerSelection === 'scissors'){
+                return('You win! Rock beats scissors.');
+            }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
+                return('You lose! Scissors beats paper.');
+                compScore++;
+            }else if(playerSelection === 'paper' && computerSelection === 'rock'){
+                return('You win! Paper beats rock.');
+            }else if(playerSelection === 'scissors' && computerSelection === 'rock'){
+                return('You lose! Rock beats scissors.');
+                compScore++;
+            }else if(playerSelection === 'scissors' && computerSelection === 'paper'){
+                return('You win! Scissors beats rock.');
+            }else{
+                console.log('Invalid input')
+            }
+        
+        
+        
+        }
+        */
+        playRound(playerSelection, computerSelection);
+        console.log( compScore)
+        return
     }
 }
 game()

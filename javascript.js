@@ -15,13 +15,14 @@ function getComputerChoice(){
     return (compChoice);
 }
 
-
+/*
 function getPlayerChoice(){
     let playerChoice = prompt('Will you choose rock, paper, or scissors?');
     playerChoice = playerChoice.toLowerCase();
     return (playerChoice);
 
 }
+*/
 /*
 create a function with two parameters playerSelection and computer selection
 prompt the user to pick rock paper or scissors
@@ -46,6 +47,6 @@ function playRound(playerSelection, computerSelection){
 
 playRound();
 /*
-create for loops to determine the winners for the game, one for teh commputer and the user
+create for loops to determine the winners for the game, one for the commputer and the user
 wrap in a while loop until either the user or the computer wins
 */
