@@ -28,6 +28,27 @@ function commputerPlay(){
     return(comp)
 }
 
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    playerSelection = 'rock'
+    console.log(playerSelection)
+    const computerSelection = commputerPlay();
+    singleRound(computerSelection, playerSelection);
+})
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    playerSelection = 'paper';
+    const computerSelection = commputerPlay();
+    singleRound(computerSelection, playerSelection);
+})
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors'
+    console.log(playerSelection);
+    const computerSelection = commputerPlay();
+    singleRound(computerSelection, playerSelection);
+})
+
 function singleRound(computerSelection, playerSelection){
     if(playerSelection === computerSelection){
         console.log('Tie game!');
@@ -52,20 +73,18 @@ function singleRound(computerSelection, playerSelection){
     }else{
         console.log('Invalid input')
     }
+
+    if(playerScore == 5){
+        console.log('You win the game');
+    }else if(compScore == 5){
+        console.log('You lose the game')
+    }
+    console.log(playerSelection, computerSelection);
+    console.log(playerScore, compScore)
 }
 
 function game(){
-    for(let i=0;i < 5; i++){
-        const playerSelection = prompt('Will you choose rock, paper, or scissors?').toLowerCase();
-        const computerSelection = commputerPlay();
-        singleRound(computerSelection, playerSelection);
-    }
-    if(compScore < playerScore){
-        console.log('You win');
-    }else if(compScore > playerScore){
-        console.log('You lose')
-    }else if(compScore == playerScore){
-        console.log('Tie game')
-    }
+    //f
+
 }
 game();
