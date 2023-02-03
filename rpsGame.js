@@ -79,12 +79,4 @@ function singleRound(computerSelection, playerSelection){
     }else if(compScore == 5){
         console.log('You lose the game')
     }
-    console.log(playerSelection, computerSelection);
-    console.log(playerScore, compScore)
 }
-
-function game(){
-    //f
-
-}
-game();
