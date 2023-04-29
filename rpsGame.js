@@ -74,6 +74,9 @@ function singleRound(computerSelection, playerSelection){
         console.log('Invalid input')
     }
 
+    $(".playerScore").html(playerScore)
+    $(".computerScore").html(compScore)
+
     if(playerScore == 5){
         console.log('You win the game');
     }else if(compScore == 5){
